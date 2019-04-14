@@ -1,7 +1,5 @@
 package algorithm;
 
-
-
 public class LecSubset {
 	static final int MAX = 10;
 	static int[] src = new int[MAX];
@@ -116,8 +114,6 @@ public class LecSubset {
 		subSet_backtracking_4(k, sum, reSum-src[k]);
 		subSet_backtracking_4(k, sum+src[k], reSum - src[k]);
 	}
-	
-	
 	
 	public static void main(String args[]) {
 		n = 100;

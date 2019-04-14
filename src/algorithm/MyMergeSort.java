@@ -30,6 +30,26 @@ public class MyMergeSort {
 		}
 	}
 	
+	// ================================================================
+	static int[] src = {2,3,4,1,40,20,7,6,8,9}; // 머지를 하고 싶은 요소
+	static int[] temp = new int[src.length]; // 부분적 머지 결과를 임시적으로 저장할 배열 
+	
+	static void mergeSort_Lec(int lo, int hi) {
+		if (lo < hi) { // 머지 소트를 위해서는 적어도 2개의 요소가 필요함 
+			int mid = lo + (hi-lo)/2;
+			mergeSort_Lec(lo, mid);
+			mergeSort_Lec(mid+1, hi);
+			
+			int p = lo; int q = mid + 1; int idx = lo;
+			while(p<=mid || q<=hi) {
+				if(q>hi || (p<=mid && src[p] < src[q])) temp[idx++] = src[p++];
+				else temp[idx++] = src[q++];
+			}
+			for (int i=lo; i<=hi; i++) src[i] = temp[i];
+		}
+	}
+	
 	public static void main(String args[]) {
+		
 	}
 }

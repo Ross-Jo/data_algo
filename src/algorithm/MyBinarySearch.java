@@ -7,7 +7,7 @@ public class MyBinarySearch {
 		int high = a.length - 1;
 		int mid;
 		
-		while(low <= high) {
+		while(low <= high) { // 바이너리 서치는 하나의 요소를 찝어내는 것이기 떄문에 <=까지 간다 
 			mid = (low + high) / 2;
 			if (a[mid] < x) {
 				low = mid + 1;

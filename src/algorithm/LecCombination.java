@@ -43,6 +43,17 @@ public class LecCombination {
 
 	}
 	
+	static void combinationDpIter(int n, int r) { // 최종 결과값은 dp[n][r]에 저장 
+		for (int i = 0; i <= n; i++) {
+			int jLen = r;
+			if (i < r) jLen = i;
+			for (int j = 0; j <= jLen; j++) {
+				if (j == 0 || i == j) dp[i][j] = 1;
+				else dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
+			}
+		}
+	}
+	
 	static int combinationCount(int n, int r) {
 		if (r==0 || n==r) return 1;
 		return combinationCount(n-1, r-1) + combinationCount(n-1, r);

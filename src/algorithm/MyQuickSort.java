@@ -149,6 +149,5 @@ public class MyQuickSort {
 	
 	public static void main(String args[]) {
 		quickSort_Lec_Lomuto(0, src.length-1);
-		System.out.println("hi");
 	}
 }

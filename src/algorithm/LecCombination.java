@@ -45,9 +45,9 @@ public class LecCombination {
 	
 	static void combinationDpIter(int n, int r) { // 최종 결과값은 dp[n][r]에 저장 
 		for (int i = 0; i <= n; i++) {
-			int jLen = r;
-			if (i < r) jLen = i;
-			for (int j = 0; j <= jLen; j++) {
+			int jLen = r; // 최대한 뽑을 수 있는 갯수 
+			if (i < r) jLen = i; // 만약 n보다 r이 더 큰 경우라면 r을 n값(여기서는 i값)으로 조정해 줘야함. 
+			for (int j = 0; j <= jLen; j++) { // n이 고정되어 있을때, j값을 늘려가면서 필요한 값을 하나씩 채워나감 
 				if (j == 0 || i == j) dp[i][j] = 1;
 				else dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
 			}
@@ -77,7 +77,7 @@ public class LecCombination {
 		System.out.println("====================");
 		
 		System.out.println(combinationCountDp(3, 2));
-		System.out.println("====================");
+		System.out.println("====================");                                              
 		
 		combinationWithRepetition(3, 2);
 		

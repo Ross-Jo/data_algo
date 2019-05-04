@@ -1,6 +1,6 @@
 package algorithm;
 
-public class StringSearch_BoyerMoore {
+public class LecStringSearch_BoyerMoore {
 	static int[] skip = new int[128]; // skip table (bad match table). 아스키 코드를 담을 수 있을 정도의 길이로 만들어줌.
 	
 	static void createSkipTable(String key) {

@@ -1,6 +1,8 @@
 package algorithm;
 
-public class StringSearch_KMP {
+// 속도가 느림. 실패함수 개선 필요       
+
+public class LecStringSearch_KMP {
 	static final int STR_MAX = 100;
 	static String str = "cccabcdabcef", key = "abcdabcef";
 	static int[] failure = new int[STR_MAX];

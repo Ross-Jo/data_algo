@@ -1,6 +1,6 @@
 package algorithm;
 
-public class StringSearch_RabinKarp {
+public class LecStringSearch_RabinKarp {
 	static String str = "6843212431", key = "4321";
 	static int strLen, keyLen;
 

@@ -102,7 +102,7 @@ public class MyQuickSort {
 	
 	static void quickSort_Lec_Hoare_Center(int lo, int hi) { // 위와는 피벗의 위치가 다른 점이 차이점임 
 		if (lo < hi) {
-			int p = src[lo + (hi-lo)/2];
+			int p = src[lo + (hi-lo)/2]; // 피벗을 값을 이렇게 뽑아놔야 함. (lo + (hi-lo)/2) 값만 p에 저장해두고, 아래애서 src[p]를 이용해 값을 비교하면, 정렬이되면서 중간에 p값이 바뀌어 버리고 종국적으로 피벗값이 계속 바뀌기 때문에 정렬이 되지 않음.  
 			int l = lo;
 			int r = hi;
 			while(l <= r) { // 피벗이 가운데에 끼어 있기 때문에 이런식(<=)으로 while문을 돌림. 그렇지 않으면 무한루프 

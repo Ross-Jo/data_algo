@@ -41,7 +41,7 @@ public class LecHeap {
 		}
 	}
 	
-	// swexpertacademy 힙코드 변형 
+	// swexpertacademy 힙코드 변형 - min heap
 	static class HeapRef {
 		static final int MAX_SIZE = 100000 + 10;
 		int[] heap = new int[MAX_SIZE];
